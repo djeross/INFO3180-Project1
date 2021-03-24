@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="container">
+    <div class="heading">
+        <h1 class="page-header">Add New Property</h1>
+        {% include 'flash_messages.html' %}
+    </div>
+    <div class="main">
+        <div class="formcontainer">
+            <form action="{{ url_for('property') }}" method="post" enctype="multipart/form-data">
+                {{ form.csrf_token }}
+                <div class="form-group">
+                    {{ form.title.label(class="labels") }} {{ form.title(class="form-control wide") }}
+                </div>
+
+                <div class="form-group">
+                    {{ form.description.label(class="labels") }} {{ form.description(class="form-control wide") }}
+                </div>
+
+                <div class="double">
+                    <div class="form-group">
+                        {{ form.rooms.label(class="labels") }} {{ form.rooms(class="form-control narrow") }}
+                    </div>
+                    <div class="form-group">
+                        {{form.bathrooms.label(class="labels")}} {{form.bathrooms(class="form-control narrow", id="bathroom")}}
+                    </div>
+                </div>
+
+                <div class="double">
+                    <div class="form-group">
+                        {{ form.price.label(class="labels") }} {{ form.price(class="form-control narrow") }}
+                    </div>
+                    <div class="form-group">
+                        {{form.ptype.label(class="labels")}} {{form.ptype(class="form-control narrow", id="ptype")}}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    {{ form.location.label(class="labels") }} {{ form.location(class="form-control narrow") }}
+                </div>
+
+                <div class="form-group">
+                    {{form.image.label(class="labels")}} {{form.image(class="form-control narrow", id="uploadimg")}}
+                </div>
+
+                <button type="submit" class="subbtn" id="addpropbtn">Add Property</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

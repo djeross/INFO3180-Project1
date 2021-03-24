@@ -1,3 +1,47 @@
 body {
     padding-top: 50px;
 }
+#headerimagetext{display: flex;flex-direction:row;gap: 10px;}
+#houseicon{padding-bottom: 0px;width: 33px;height: 33px;}
+#navbarNav{padding-left: 30px;}
+#navbarNav ul{gap: 20px;}
+.wide{width: 800px;}
+.narrow{width: 350px;}
+.double{display:flex; gap:100px;}
+form{display: flex;flex-direction: column;}
+#addpropbtn{width: 120px;height: 40px;background-color: #a8943d;;
+border: 0;color:white; border-radius: 4px;}
+#uploadimg{width: 250px;}
+.container{padding-top: 20px;}
+.heading{padding-bottom: 20px;}
+
+.imagecontainer{display: grid;grid-template-columns: repeat(3, 3fr);grid-gap: 15px;}
+.images{width: 300px;height: 250px;}
+.card{
+max-width:min-content; border-radius: 3px 3px 3px 3px; }
+.btn-primary{border-radius: 25px;background-color:black;border-color:white;}
+#viewprop{border-radius: 0px 0px 3px 3px;background-color: #a8943d;border-color:white; border:1px}
+#bar{background-color: #a8943d;}
+h1{font-weight: 800;}
+
+.side{display: flex;flex-direction: row; gap:20px;}
+.detailimg{width: 400px;height: 100%}
+#detailcard{
+    display: flex;
+    flex-direction: row; 
+    gap:20px;
+    border-style: solid;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    
+}
+#priceid{background-color: #0c71e0;}
+#categoryid{background-color: #fee715ff;}
+#realtor{background-color: #a8943d;}
+#right{width: 500px;}
+#last{display: flex;flex-direction: column;}
+#dtitle{margin-bottom: 20px;}
+#realtor{border-radius: 4px;width: 120px; margin-top: 20px;}
+.side{padding-top: 5px;padding-bottom: 5px;}
+.icons{width: 20px; height: 20px; padding-left: -50px;padding-top: 5px;}
+.form-control{border-color: black;}
+.labels{font-weight: bold;font-size: large;}

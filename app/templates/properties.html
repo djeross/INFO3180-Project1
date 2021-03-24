@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<h1>Properties</h1>
+{% include 'flash_messages.html' %}
+<br>
+<div class="imagecontainer">
+    {% with prop= allproperties%}
+        {%if prop==[]%}
+            <p>There are no images to be displayed</p>
+        {%else%}
+            {% for item in prop%}
+                {% set imagedb= item[1] %}
+                {% set pid= item[0] %}
+                <div class="card" >
+                    <img class="card-img-top images" src="{{url_for('get_image',filename=imagedb)}}" alt="house image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item[2]}}</h5>
+                        <div class="side">
+                            <img src="{{ url_for('static', filename='/images/location.png')}}" class="icons" alt="location icon">
+                            <p class="card-text">{{item[3]}}</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">{{item[4]}}</a>
+                    </div>
+                <a href="{{url_for('individualProperty',propertyid=pid)}}" class="btn btn-primary" id="viewprop">View Property</a>
+                </div>
+            {% endfor %}
+        {%endif%}
+    {% endwith %}
+</div>
+
+{% endblock %}
